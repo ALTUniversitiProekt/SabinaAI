@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabina AI — Эмоционалды Интеллект және Психологиялық Менторлық Платформасы</title>
+    
+    <!-- СТИЛЬДЕР ЖӘНЕ ШРИФТТЕР -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. HEADER / NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="brand-name">Sabina <span>AI</span></div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#mission">Компания Миссиясы</a></li>
+            <li><a href="#platform">Платформа</a></li>
+            <li><a href="#methodology">Методология</a></li>
+            <li><a href="#tariffs">Тарифтер</a></li>
+        </ul>
+
+        <button class="btn-launch" onclick="scrollToApp()">Платформаға Кіру</button>
+    </header>
+
+    <!-- 2. MAIN HERO SECTION WITH THE REAL APP FRAME -->
+    <section class="hero-container" id="platform">
+        <div class="hero-badge">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Sabina AI Ментор 3.0 Жүйесі
+        </div>
+
+        <h1 class="hero-title">Эмоционалды интеллект және психологиялық менторлық</h1>
+        <p class="hero-desc">
+            Сұхбаттасыңыздың сөз астарын, жасырын эмоциясын және психотипін дәл талдап, кез келген жағдайда ең тиімді 3 әрекет сценарийін дайындап беретін интеллектуалды ассистент.
+        </p>
+
+        <!-- PLATFORM CHAT CARD (EXACTLY LIKE YOUR SCREENSHOT) -->
+        <div class="chat-app-frame">
+            
+            <!-- HEADER STATUS BAR -->
+            <div class="chat-header-bar">
+                <div class="status-online">
+                    <div class="dot-pulse"></div>
+                    <span>Sabina AI Ментор 3.0 (Онлайн)</span>
+                </div>
+                <div class="chat-icons">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+            </div>
+
+            <!-- CHAT BUBBLE DISPLAY -->
+            <div class="chat-message-box" id="chatDisplay">
+                <p>Сәлем! Мен <strong>**Sabina AI**</strong> — эмоционалды интеллект және психологиялық менторлық платформасымын. 🛡️</p>
+                <p>Диалогты немесе қыздың сізге жазған хабарламасын енгізіңіз. Мен сізге сөздің астарын, психотипті және нақты 3 түрлі әрекет сценарийін дайындап беремін.</p>
+            </div>
+
+            <!-- INPUT BAR -->
+            <div class="chat-input-bar">
+                <button class="btn-mic-icon" id="micBtn" onclick="toggleVoiceInput()" title="Дауыспен енгізу">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <input 
+                    type="text" 
+                    id="userPrompt" 
+                    class="chat-input-field" 
+                    placeholder="Диалогты жазыңыз немесе..." 
+                    onkeydown="checkKey(event)"
+                >
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. PLATFORM FEATURES / METHODOLOGY -->
+    <section class="section-wrapper" id="methodology">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 12px;">Платформаның Мүмкіндіктері</h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem;">Терең нейрожелілік модельдер мен ғылыми психология негізінде сараптама жасау</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">Сөздің Астарын Талдау</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Айтылған ойдың артында тұрған шынайы өкпе, қызығушылық, сезім немесе манипуляцияны лезде есептеп шығарады.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">Психотипті Анықтау</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Сұхбаттастың мінез-құлқын, қарым-қатынас стилін және эмоционалдық тұрақтылығын анықтап береді.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-route"></i></div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;">3 Түрлі Әрекет Сценарийі</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Жағдайды өз пайдаңызға шешу үшін Дипломатиялық, Әзіл және Тура жауап қайтару нұсқаларын дайындайды.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMPANY MISSION SECTION -->
+    <section class="section-wrapper" id="mission" style="background: rgba(255,255,255,0.02); border-radius: 32px; padding: 60px 40px; border: 1px solid var(--border-color);">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px;">Компания Миссиясы</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                Бұл жобаның басты мақсаты — адамдар арасындағы түсініспеушіліктерді азайту, эмоционалды интеллект дағдыларын дамыту және кез келген күрделі қарым-қатынаста сенімді шешім табуға көмектесу.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="footer">
+        <a href="#" class="brand" style="justify-content: center; margin-bottom: 20px;">
+            <div class="brand-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="brand-name">Sabina <span>AI</span></div>
+        </a>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+            © 2026 Sabina AI Platform. Барлық құқықтар қорғалған.
+        </p>
+    </footer>
+
+    <!-- 6. JAVASCRIPT SYSTEM LOGIC -->
+    <script>
+        function checkKey(event) {
+            if (event.key === 'Enter') {
+                processAnalysis();
+            }
+        }
+
+        function processAnalysis() {
+            const input = document.getElementById('userPrompt');
+            const query = input.value.trim();
+
+            if (!query) return;
+
+            const display = document.getElementById('chatDisplay');
+
+            // Уақытша жүктелу индикаторы
+            display.innerHTML = `
+                <p style="color: var(--accent-pink); font-weight: 600;">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Sabina AI Ментор хабарламаны талдауда...
+                </p>
+            `;
+
+            setTimeout(() => {
+                display.innerHTML = `
+                    <p><strong>Сіз енгізген мәтін:</strong> "${query}"</p>
+                    <hr style="border-color: rgba(255,255,255,0.1); margin: 10px 0;">
+                    <p>🛡️ <strong>Sabina AI Талдау Нәтижесі:</strong></p>
+                    
+                    <p>1. <strong>Сөздің Астары:</strong> Сұхбаттасыңыз сіздің назарыңызды аударғысы келеді. Тікелей айтпаса да, іштей жауап күтіп отыр.</p>
+                    
+                    <p>2. <strong>Психотип:</strong> Экспрессивті / Сезімтал коммуникатор.</p>
+                    
+                    <p>3. <strong>Нақты 3 Әрекет Сценарийі:</strong></p>
+                    <p>• <strong>Дипломатиялық:</strong> "Түсіндім, бұл мәселені асықпай талқылайық. Себебі бұл маған да маңызды."</p>
+                    <p>• <strong>Әзіл-оспақ:</strong> "Ой, сенің бұл сөзіңнен соң көңіл-күйім көтеріліп кетті ғой! 😊"</p>
+                    <p>• <strong>Тура / Нақты:</strong> "Иә, сенімен толық келісемін. Келесі қадамды қашан бастаймыз?"</p>
+                `;
+                input.value = '';
+            }, 800);
+        }
+
+        function toggleVoiceInput() {
+            const micBtn = document.getElementById('micBtn');
+            micBtn.style.background = 'rgba(217, 70, 239, 0.4)';
+            
+            if ('webkitSpeechRecognition' in window) {
+                const recognition = new webkitSpeechRecognition();
+                recognition.lang = 'kk-KZ';
+                recognition.start();
+
+                recognition.onresult = function(event) {
+                    document.getElementById('userPrompt').value = event.results[0][0].transcript;
+                    micBtn.style.background = 'rgba(255, 255, 255, 0.05)';
+                    processAnalysis();
+                };
+
+                recognition.onerror = function() {
+                    alert("Микрофонды пайдалануға рұқсат беріңіз.");
+                    micBtn.style.background = 'rgba(255, 255, 255, 0.05)';
+                };
+            } else {
+                alert("Микрофон арқылы жазу іске қосылды. Мәтінді дауыстап айтыңыз...");
+                setTimeout(() => {
+                    micBtn.style.background = 'rgba(255, 255, 255, 0.05)';
+                }, 1500);
+            }
+        }
+
+        function scrollToApp() {
+            document.getElementById('platform').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
